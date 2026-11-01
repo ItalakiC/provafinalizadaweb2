@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loja de Games</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="masthead">
+        <h2 class="logo"><a href="index.html">Loja de Games</a></h2>
+        <nav aria-label="Principal">
+            <ul>
+                <li>Periféricos</li>
+                <li>Jogos Físicos</li>
+                <li>Acessórios</li>
+                <li>Consoles</li>
+                <li><a href="carrinho.html">Carrinho <span class="contador" id="contadorCarrinho">0</span></a></li>
+                <li><button type="button" id="botaoTema" class="botao-tema">🌗 Tema</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="cat-jogos">
+            <div class="hero-conteudo">
+                <span class="tag">Semana do Consumidor</span>
+                <h1>Veja todas as ofertas</h1>
+                <p>Jogos e consoles na promoção</p>
+            </div>
+        </section>
+
+        <section id="noticias-header" aria-label="Busca e filtros">
+            <input type="search" id="busca-nome" placeholder="Buscar pelo título..." aria-label="Buscar produto pelo nome">
+            <div class="filtros" role="group" aria-label="Filtrar por categoria">
+                <button type="button" class="filtro ativo" data-filtro="todas" id="botaoTodas">Todas</button>
+                <button type="button" class="filtro cat-jogos" data-filtro="Jogos Físicos" id="botaoJogos">Jogos Físicos</button>
+                <button type="button" class="filtro cat-perif" data-filtro="Periféricos" id="botaoPerif">Periféricos</button>
+                <button type="button" class="filtro cat-consoles" data-filtro="Consoles" id="botaoConsoles">Consoles</button>
+                <button type="button" class="filtro cat-acessorios" data-filtro="Acessórios" id="botaoAcesso">Acessórios</button>
+            </div>
+        </section>
+
+        <p class="dica">Clique em um produto para colocar no carrinho.</p>
+
+        <section id="lista-noticias" aria-live="polite">
+            <article class="bloco-produto cat-jogos" data-categoria="Jogos Físicos" data-id="1" data-preco="200" role="button" tabindex="0" aria-label="Adicionar Elden Ring ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Jogos</span><h5>Elden Ring</h5>
+                    <p class="nota">★★★★★ 4,8</p>
+                    <p class="preco">R$ 200,00</p></div>
+            </article>
+            <article class="bloco-produto cat-perif" data-categoria="Periféricos" data-id="2" data-preco="250" role="button" tabindex="0" aria-label="Adicionar Controle ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Periféricos</span><h5>Controle</h5>
+                    <p class="nota">★★★★★ 4,6</p>
+                    <p class="preco">R$ 250,00</p></div>
+            </article>
+            <article class="bloco-produto cat-perif" data-categoria="Periféricos" data-id="3" data-preco="100" role="button" tabindex="0" aria-label="Adicionar Fone de Ouvido ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Periféricos</span><h5>Fone de Ouvido</h5>
+                    <p class="nota">★★★★☆ 4,3</p>
+                    <p class="preco">R$ 100,00</p></div>
+            </article>
+            <article class="bloco-produto cat-consoles" data-categoria="Consoles" data-id="4" data-preco="3000" role="button" tabindex="0" aria-label="Adicionar PS5 ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Consoles</span><h5>PS5</h5>
+                    <p class="nota">★★★★★ 4,9</p>
+                    <p class="preco">R$ 3.000,00</p></div>
+            </article>
+            <article class="bloco-produto cat-acessorios" data-categoria="Acessórios" data-id="5" data-preco="20" role="button" tabindex="0" aria-label="Adicionar Borracha de analógico ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Acessórios</span><h5>Borracha de analógico</h5>
+                    <p class="nota">★★★★☆ 4,2</p>
+                    <p class="preco">R$ 20,00</p></div>
+            </article>
+            <article class="bloco-produto cat-jogos" data-categoria="Jogos Físicos" data-id="6" data-preco="400" role="button" tabindex="0" aria-label="Adicionar Wolverine ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Jogos</span><h5>Wolverine</h5>
+                    <p class="nota">★★★★★ 4,7</p>
+                    <p class="preco">R$ 400,00</p></div>
+            </article>
+            <article class="bloco-produto cat-acessorios" data-categoria="Acessórios" data-id="7" data-preco="60" role="button" tabindex="0" aria-label="Adicionar Apoio de Controle ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Acessórios</span><h5>Apoio de Controle</h5>
+                    <p class="nota">★★★★☆ 4,4</p>
+                    <p class="preco">R$ 60,00</p></div>
+            </article>
+            <article class="bloco-produto cat-consoles" data-categoria="Consoles" data-id="8" data-preco="3500" role="button" tabindex="0" aria-label="Adicionar Switch 2 ao carrinho">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Consoles</span><h5>Switch 2</h5>
+                    <p class="nota">★★★★★ 4,8</p>
+                    <p class="preco">R$ 3.500,00</p></div>
+            </article>
+        </section>
+
+        <p id="sem-resultado" hidden>Nenhum produto encontrado. Tente outro título ou categoria.</p>
+
+        <aside id="newsletter">
+            <h3>Receba ofertas por e-mail</h3>
+            <form id="formEmail">
+                <input type="text" id="email" placeholder="seuemail@gmail.com" autocomplete="email" aria-label="Seu e-mail">
+                <button type="submit" class="botao-principal">Receber notificações</button>
+            </form>
+        </aside>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Loja de Games - Italo</p>
+        <address>Contato: italo@gmail.com | (11) 93847-5162</address>
+        <p>Site desenvolvido para fins acadêmicos</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

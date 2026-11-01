@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrinho - Loja de Games</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="masthead">
+        <h2 class="logo"><a href="index.html">Loja de Games</a></h2>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Loja</a></li>
+                <li><a href="carrinho.html" aria-current="page">Carrinho <span class="contador" id="contadorCarrinho">0</span></a></li>
+                <li><button type="button" id="botaoTema" class="botao-tema">🌗 Tema</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="titulo-pagina">Seu carrinho</h1>
+
+        <div class="carrinho-layout">
+            <section class="painel" aria-labelledby="tituloItens">
+                <h5 id="tituloItens">Itens do carrinho</h5>
+
+                <div id="areaCarrinho">
+                    <div class="tabela-wrap">
+                        <table class="tabela-carrinho">
+                            <thead>
+                                <tr>
+                                    <th><span class="visually-hidden">Imagem</span></th>
+                                    <th>Produto</th>
+                                    <th>Quantidade</th>
+                                    <th>Subtotal</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaCarrinho"></tbody>
+                        </table>
+                    </div>
+
+                    <form id="formCupom" class="cupom" novalidate>
+                        <label for="codigoCupom">Cupom de desconto <small>(GAMES10: 10% em compras acima de R$ 500,00)</small></label>
+                        <div class="cupom-campos">
+                            <input type="text" id="codigoCupom" placeholder="Digite o cupom" autocomplete="off">
+                            <button type="submit" class="botao-principal">Aplicar</button>
+                        </div>
+                        <p id="msgCupom" hidden></p>
+                    </form>
+                </div>
+
+                <p id="vazioCarrinho" hidden>O carrinho está vazio. <a href="index.html">Volte à loja</a> para adicionar produtos.</p>
+            </section>
+
+            <aside class="painel">
+                <h5>Finalizar pedido</h5>
+                <div id="erroPedido" class="alerta" role="alert" hidden></div>
+                <form id="formPedido" novalidate>
+                    <div class="campo">
+                        <label for="nomeCliente">Nome</label>
+                        <input type="text" id="nomeCliente" autocomplete="name">
+                    </div>
+                    <hr>
+                    <div class="linha"><span>Subtotal</span><span id="subtotal">R$ 0,00</span></div>
+                    <div class="linha" id="linhaDesconto" hidden><span>Desconto (cupom)</span><span id="desconto"></span></div>
+                    <div class="linha"><span>Taxa de entrega</span><span id="taxaEntrega">R$ 0,00</span></div>
+                    <div class="linha total"><span>Valor Total</span><span id="valorTotal">R$ 0,00</span></div>
+                    <button type="submit" class="botao-principal largo">Finalizar pedido</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+
+    <dialog id="modalPedido" aria-labelledby="tituloModal">
+        <h5 id="tituloModal">Pedido realizado</h5>
+        <div id="resumoPedido"></div>
+        <button type="button" class="botao-principal" id="botaoFechar">Fechar</button>
+    </dialog>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Loja de Games - Italo</p>
+        <address>Contato: italo@gmail.com | (11) 93847-5162</address>
+        <p>Site desenvolvido para fins acadêmicos</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
